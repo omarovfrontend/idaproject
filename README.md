@@ -1,6 +1,4 @@
-# nuxt-blog
-
-> Блог на VueJS, NuxtJS, NodeJS (Express), MongoDB
+# idaproject
 
 ## Build Setup
 
