@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/s.omarov/Desktop/Projects/idaproject/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_70d43487"
+  },
+  {
+    "name": "id",
+    "path": "/:id",
+    "component": "/Users/s.omarov/Desktop/Projects/idaproject/pages/_id.vue",
+    "chunkName": "pages/_id",
+    "_name": "_7b23acaf"
+  }
+]
