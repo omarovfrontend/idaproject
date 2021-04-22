@@ -202,6 +202,10 @@ export default {
       transition: all 0.5s ease-in-out;
     }
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 .cart__empty-text {

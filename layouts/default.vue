@@ -22,13 +22,13 @@
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader";
-import AppSidebar from "@/components/AppSidebar";
-import AppCart from "@/components/AppCart";
-import ProductsSort from "@/components/ProductsSort";
-import AppLoader from "@/components/AppLoader";
+  import AppHeader from "@/components/AppHeader";
+  import AppSidebar from "@/components/AppSidebar";
+  import AppCart from "@/components/AppCart";
+  import ProductsSort from "@/components/ProductsSort";
+  import AppLoader from "@/components/AppLoader";
 
-export default {
+  export default {
   components: {
     AppHeader,
     AppSidebar,
@@ -59,10 +59,7 @@ export default {
 
   methods: {
     async fetchCategories() {
-      const response = await fetch(
-          "https://frontend-test.idaproject.com/api/product-category"
-      );
-      this.categories = await response.json();
+      this.categories = await this.$axios.$get("https://frontend-test.idaproject.com/api/product-category");
     }
   }
 };
@@ -84,10 +81,22 @@ export default {
 
   &__inner {
     display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__view {
     width: calc(100% - 160px);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 92px;
   }
 }
 </style>

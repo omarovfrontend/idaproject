@@ -4,8 +4,6 @@ export const state = () => ({
 
 export const mutations = {
     addProduct(state, product) {
-        const filteredProductsLength = state.cart.filter(item => item.id === product.id).length
-        if (filteredProductsLength === 1) return
         state.cart.push(product)
     },
 

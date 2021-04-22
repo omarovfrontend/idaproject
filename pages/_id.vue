@@ -28,14 +28,10 @@ export default {
     AppProduct
   },
 
-  async asyncData({ params: { id } }) {
+  async asyncData({ $axios, params: { id } }) {
     const currentId = Number(id)
 
-    const response = await fetch(
-        "https://frontend-test.idaproject.com/api/product"
-    )
-
-    const products = await response.json()
+    const products = await $axios.$get("https://frontend-test.idaproject.com/api/product");
 
     return {
       products: sortBy(products.filter((product) => product.category === currentId), ['price']).reverse()

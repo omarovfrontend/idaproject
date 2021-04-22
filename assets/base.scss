@@ -36,6 +36,10 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 
   &__list {
