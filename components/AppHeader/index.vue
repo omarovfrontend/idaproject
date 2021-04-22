@@ -10,7 +10,7 @@
           class="header__cart"
           @click="handleOpenCartClick"
       >
-        <span class="header__cart-total">{{ productCount }}</span>
+        <span v-if="productCount" class="header__cart-total">{{ productCount }}</span>
       </button>
     </div>
   </header>
@@ -91,6 +91,15 @@ export default {
       font-size: 8px;
       line-height: 12px;
     }
+  }
+
+  @media (max-width: 480px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
   }
 }
 </style>

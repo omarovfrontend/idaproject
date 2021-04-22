@@ -28,11 +28,8 @@ export default {
     AppProduct
   },
 
-  async asyncData({params: { id }} ) {
-    const response = await fetch(
-        "https://frontend-test.idaproject.com/api/product"
-    );
-    const products = await response.json();
+  async asyncData({$axios, params: { id }} ) {
+    const products = await $axios.$get("https://frontend-test.idaproject.com/api/product");
 
     return {
       products: sortBy(products, ['price']).reverse()
