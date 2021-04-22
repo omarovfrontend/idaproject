@@ -8,7 +8,13 @@
 
 <script>
 export default {
+    name: "AppLoader",
 
+    mounted() {
+        setTimeout(() => {
+            document.body.classList.add('page-loaded')
+        }, 1000);
+    }
 }
 </script>
 
